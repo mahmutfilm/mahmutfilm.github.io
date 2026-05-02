@@ -3,76 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAHMUT FILM | 4K Dublaj & Sinema</title>
+    <title>MAHMUT FILM</title>
     <style>
-        body { background-color: #050505; color: #fff; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; }
-        .navbar { padding: 15px 5%; background: rgba(0,0,0,0.95); position: fixed; width: 100%; z-index: 2000; display: flex; align-items: center; border-bottom: 2px solid #e50914; }
+        body { background-color: #000; color: #fff; font-family: sans-serif; margin: 0; }
+        .navbar { padding: 15px 5%; background: #000; border-bottom: 2px solid #e50914; position: fixed; width: 100%; z-index: 100; }
         .logo { color: #e50914; font-size: 30px; font-weight: 900; }
-        
-        /* Kategori MenC<sC< */
-        .categories { margin-top: 80px; padding: 20px 5%; display: flex; gap: 15px; overflow-x: auto; }
-        .cat-btn { background: #222; border: 1px solid #444; color: #fff; padding: 8px 20px; border-radius: 20px; cursor: pointer; white-space: nowrap; }
-        .cat-btn:hover { background: #e50914; border-color: #e50914; }
-
-        .row { padding: 0 5% 30px; }
-        .row h2 { font-size: 1.8rem; margin-bottom: 20px; color: #e50914; }
-        
-        /* Film KartD1 ve Detaylar */
-        .movie-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 25px; }
-        .movie-card { background: #111; border-radius: 10px; overflow: hidden; transition: 0.4s; position: relative; }
-        .movie-card:hover { transform: translateY(-10px); box-shadow: 0 10px 20px rgba(229, 9, 20, 0.3); }
-        .movie-card img { width: 100%; height: 300px; object-fit: cover; }
-        
-        .info-panel { padding: 15px; border-top: 1px solid #333; }
-        .title { font-size: 1.2rem; font-weight: bold; margin-bottom: 5px; }
-        .meta { font-size: 0.85rem; color: #aaa; margin-bottom: 10px; display: flex; justify-content: space-between; }
-        .producer-info { font-size: 0.8rem; color: #888; border-top: 1px dashed #444; pt: 8px; margin-top: 8px; }
-        
-        /* Kalite ve Dublaj Etiketleri */
-        .tags { position: absolute; top: 10px; right: 10px; display: flex; flex-direction: column; gap: 5px; }
-        .badge { background: #e50914; padding: 4px 8px; font-size: 10px; font-weight: bold; border-radius: 3px; }
-        .quality { background: #fff; color: #000; }
-        
-        .play-now { width: 100%; background: #e50914; color: #fff; border: none; padding: 10px; font-weight: bold; cursor: pointer; margin-top: 10px; }
+        .container { padding: 100px 5% 50px; }
+        .movie-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 20px; }
+        .card { background: #111; border-radius: 8px; overflow: hidden; position: relative; text-align: center; padding-bottom: 10px; }
+        .card img { width: 100%; height: 240px; object-fit: cover; }
+        .badge { position: absolute; top: 5px; right: 5px; background: #e50914; font-size: 10px; padding: 3px 6px; font-weight: bold; border-radius: 3px; }
+        .play-btn { background: #fff; color: #000; border: none; padding: 8px 15px; font-weight: bold; margin-top: 10px; cursor: pointer; border-radius: 4px; width: 90%; }
+        h2 { color: #e50914; margin-bottom: 20px; }
     </style>
 </head>
 <body>
     <div class="navbar"><div class="logo">M</div></div>
-    
-    <div class="categories">
-        <button class="cat-btn">Aksiyon</button>
-        <button class="cat-btn">Bilim Kurgu</button>
-        <button class="cat-btn">Korku</button>
-        <button class="cat-btn">Komedi</button>
-        <button class="cat-btn">Dram</button>
+    <div class="container">
+        <h2>PopC<ler Filmler (4K Dublaj)</h2>
+        <div id="movies" class="movie-grid">
+            <!-- Filmler Buraya Akacak -->
+        </div>
     </div>
-
-    <div class="row">
-        <h2>PopC<ler Filmler</h2>
-        <div id="movie-list" class="movie-grid">
-            <!-- C
-rnek Film KartD1 -->
-            <div class="movie-card">
-                <div class="tags">
-                    <span class="badge">TR DUBLAJ</span>
-                    <span class="badge quality">4K ULTRA HD</span>
-                </div>
-                <img src="https://image.tmdb.org/t/p/w500/q6720Bocp9HogSfuT9o90btTguM.jpg">
-                <div class="info-panel">
-                    <div class="title">Rambo: Son Kan</div>
-                    <div class="meta"><span>2019</span> <span>1s 41dk</span></div>
-                    <div class="producer-info">
-                        <strong>YapD1mcD1:</strong> Avi Lerner, Kevin King-Templeton<br>
-                        <strong>HakkD1nda:</strong> John Rambo'nun son mC<cadelesini konu alan efsanevi aksiyon.
-                    </div>
-                    <button class="play-now">HEMEN D0ZLE</button>
-                </div>
-            </div>
-            <!-- DiD        </div>
-    </div>
-
     <script>
-        // API anahtarD1n ile gerC'ek verileri C'ekme fonksiyonu buraya gelecek
-        // Kesintisiz oynatma iC'in hD1zlD1 sunucu linklerini buraya baD    </script>
+        // Mahmut, burasD1 motor kD1smD1. Filmleri burasD1 C'eker.
+        const moviesDiv = document.getElementById('movies');
+        const movies = [
+            {t: "Batman", p: "Avi Lerner", i: "https://image.tmdb.org/t/p/w500/6DrHO1oPABT6S7G9SotS7STI94K.jpg"},
+            {t: "Rambo: Son Kan", p: "Kevin King", i: "https://image.tmdb.org/t/p/w500/q6720Bocp9HogSfuT9o90btTguM.jpg"},
+            {t: "John Wick 4", p: "Basil Iwanyk", i: "https://image.tmdb.org/t/p/w500/8tZYtuWezp8J70U1CN0o3x0o0XF.jpg"},
+            {t: "HD1zlD1 ve C
+fkeli 10", p: "Neal Moritz", i: "https://image.tmdb.org/t/p/w500/fiVW0BtJm7pPStJ9aCba9awphmP.jpg"}
+        ];
+
+        movies.forEach(m => {
+            moviesDiv.innerHTML += `
+                <div class="card">
+                    <span class="badge">4K DUBLAJ</span>
+                    <img src="${m.i}">
+                    <div style="padding:5px; font-size:14px;"><b>${m.t}</b></div>
+                    <div style="font-size:10px; color:#888;">YapD1m: ${m.p}</div>
+                    <button class="play-btn" onclick="alert('Film yC<kleniyor, lC<tfen bekleyin...')">b
+6 OYNAT</button>
+                </div>`;
+        });
+    </script>
 </body>
 </html>
