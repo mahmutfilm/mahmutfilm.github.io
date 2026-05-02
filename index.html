@@ -3,36 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MAHMUT FILM</title>
+    <title>MAHMUT FILM | 4K Sinema</title>
     <style>
-        body { background-color: #000; color: #fff; font-family: sans-serif; margin: 0; }
-        .navbar { padding: 20px 5%; background: rgba(0,0,0,0.8); position: fixed; width: 90%; z-index: 100; display: flex; align-items: center; }
-        .logo { color: #e50914; font-size: 38px; font-weight: bold; }
-        .container { padding: 100px 5% 50px; }
-        .row h2 { font-size: 1.4rem; color: #fff; margin-bottom: 20px; }
-        .posters { display: flex; gap: 15px; overflow-x: scroll; padding: 10px 0; }
-        .posters::-webkit-scrollbar { display: none; }
-        .card { min-width: 160px; position: relative; transition: transform 0.3s; }
-        .card:hover { transform: scale(1.05); }
-        .card img { width: 100%; border-radius: 4px; border: 1px solid #333; }
-        .tag { position: absolute; bottom: 8px; left: 8px; background: #e50914; color: #fff; padding: 2px 6px; font-size: 10px; font-weight: bold; border-radius: 2px; }
+        body { background-color: #050505; color: white; font-family: 'Arial', sans-serif; margin: 0; }
+        .header { background: #000; padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #e50914; position: fixed; width: 90%; z-index: 1000; }
+        .logo { color: #e50914; font-size: 35px; font-weight: 900; }
+        .search-box { background: #222; border: 1px solid #444; color: white; padding: 10px; border-radius: 5px; width: 250px; }
+        .container { padding: 120px 5% 50px; }
+        .category-title { color: #e50914; font-size: 1.5rem; margin-top: 30px; }
+        .movie-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 25px; margin-top: 20px; }
+        .movie-card { background: #141414; border-radius: 8px; overflow: hidden; border: 1px solid #333; transition: 0.4s; }
+        .movie-card:hover { transform: scale(1.05); border-color: #e50914; }
+        .movie-card img { width: 100%; height: 300px; object-fit: cover; }
+        .info { padding: 15px; }
+        .title { font-weight: bold; font-size: 1.1rem; margin-bottom: 5px; }
+        .desc { font-size: 0.85rem; color: #aaa; height: 40px; overflow: hidden; margin-bottom: 10px; }
+        .meta { display: flex; justify-content: space-between; font-size: 10px; font-weight: bold; }
+        .badge { background: #e50914; padding: 3px 7px; border-radius: 3px; }
     </style>
 </head>
 <body>
-    <div class="navbar"><div class="logo">M</div></div>
+    <div class="header">
+        <div class="logo">M</div>
+        <input type="text" class="search-box" placeholder="Film ara...">
+    </div>
+
     <div class="container">
-        <div class="row">
-            <h2>PopC<ler Filmler</h2>
-            <div class="posters">
-                <!-- Film 1 -->
-                <div class="card">
-                    <img src="https://image.tmdb.org/t/p/w500/6DrHO1oPABT6S7G9SotS7STI94K.jpg">
-                    <div class="tag">4K DUBLAJ</div>
-                </div>
-                <!-- Film 2 -->
-                <div class="card">
-                    <img src="https://image.tmdb.org/t/p/w500/q6720Bocp9HogSfuT9o90btTguM.jpg">
-                    <div class="tag">HD TC            </div>
+        <div class="category-title">Aksiyon & PopC<ler</div>
+        <div class="movie-grid">
+            <!-- Film 1 -->
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/6DrHO1oPABT6S7G9SotS7STI94K.jpg">
+                <div class="info">
+                    <div class="title">Batman</div>
+                    <div class="desc">Gotham'D1n koruyucusu karanlD1k gC<C'lere karE                    <div class="meta">
+                        <span class="badge">4K ULTRA HD</span>
+                        <span class="badge" style="background:#444;">TC                </div>
+            </div>
+            <!-- Film 2 -->
+            <div class="movie-card">
+                <img src="https://image.tmdb.org/t/p/w500/q6720Bocp9HogSfuT9o90btTguM.jpg">
+                <div class="info">
+                    <div class="title">Rambo: Son Kan</div>
+                    <div class="desc">Efsane asker son bir gC6rev iC'in geri dC6nC<yor.</div>
+                    <div class="meta">
+                        <span class="badge">1080P HD</span>
+                        <span class="badge" style="background:#444;">TC                </div>
+            </div>
         </div>
     </div>
 </body>
